@@ -48,22 +48,25 @@ formatter = default
 level = DEBUG
 
 [handler_accesslog]
-class = logging.FileHandler
+class = StreamHandler
+args = (sys.stdout,)
 level = NOTSET
 formatter = default
-args = ("/tmp/an_access.log", "w")
+args = (sys.stdout,)
 
 [handler_main]
-class = logging.FileHandler
+class = StreamHandler
+args = (sys.stdout,)
 level = DEBUG
 formatter = default
-args = ("/tmp/airnotifier.log", "w")
+args = (sys.stdout,)
 
 [handler_pushlog]
-class = logging.FileHandler
+class = StreamHandler
+args = (sys.stdout,)
 level = DEBUG
 formatter = default
-args = ("/tmp/pushlog.log", "w")
+args = (sys.stdout,)
 
 [handler_silent]
 class=StreamHandler

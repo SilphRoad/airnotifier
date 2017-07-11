@@ -3,7 +3,7 @@ FROM python:2.7
 ENV DEBIAN_FRONTEND=noninteractive TERM=linux
 
 EXPOSE 8801
-VOLUME ["/config", "/var/airnotifier", "/var/log/airnotifier"]
+VOLUME ["/config", "/var/airnotifier"]
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends git ca-certificates && \
